@@ -4,6 +4,7 @@
   "codeowners": ["vladurash"],
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/rest_command",
+  "issue_tracker": "https://github.com/vladurash/ha_rest_commands_gui/issues",
   "integration_type": "service",
   "iot_class": "local_push",
   "requirements": [],
