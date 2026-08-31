@@ -1,5 +1,7 @@
 # Changelog
 
+## 1.1.1 — Minor fixes
+
 ## 1.1.0 — Request history + dashboard card
 
 - Add `rest_command.test_request` — fire an arbitrary HTTP request (method, URL, headers, payload, timeout, SSL) and return `{status, content, headers}`.
