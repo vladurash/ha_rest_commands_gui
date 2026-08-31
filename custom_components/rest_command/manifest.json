@@ -1,7 +1,7 @@
 {
   "domain": "rest_command",
   "name": "RESTful Command",
-  "codeowners": [],
+  "codeowners": "Vlad",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/rest_command",
   "integration_type": "service",
