@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "RESTful Command",
+        "description": "RESTful Command lets you create REST API calls as services from the UI. After setup, add commands from the integration entry."
+      }
+    },
+    "abort": {
+      "already_configured": "RESTful Command is already configured. Add or edit commands from the integration entry."
+    }
+  },
+  "config_subentries": {
+    "command": {
+      "title": "REST command",
+      "step": {
+        "user": {
+          "title": "Add REST command",
+          "description": "Define a REST API call. The command name becomes a service (rest_command.<name>).",
+          "data": {
+            "name": "Command name",
+            "url": "URL",
+            "method": "Method",
+            "headers": "Headers (one per line, 'Key: Value')",
+            "payload": "Payload (body sent with the request)",
+            "content_type": "Content-Type",
+            "authentication": "Authentication",
+            "username": "Username",
+            "password": "Password",
+            "timeout": "Timeout (seconds)",
+            "verify_ssl": "Verify SSL certificate",
+            "insecure_cipher": "Allow insecure ciphers",
+            "skip_url_encoding": "Skip URL encoding",
+            "return_response": "Return response data"
+          }
+        },
+        "reconfigure": {
+          "title": "Edit REST command",
+          "description": "Modify the REST API call.",
+          "data": {
+            "name": "Command name",
+            "url": "URL",
+            "method": "Method",
+            "headers": "Headers (one per line, 'Key: Value')",
+            "payload": "Payload (body sent with the request)",
+            "content_type": "Content-Type",
+            "authentication": "Authentication",
+            "username": "Username",
+            "password": "Password",
+            "timeout": "Timeout (seconds)",
+            "verify_ssl": "Verify SSL certificate",
+            "insecure_cipher": "Allow insecure ciphers",
+            "skip_url_encoding": "Skip URL encoding",
+            "return_response": "Return response data"
+          }
+        }
+      },
+      "error": {
+        "invalid_url": "URL cannot be empty.",
+        "invalid_name": "Command name cannot be empty."
+      }
+    }
+  }
+}

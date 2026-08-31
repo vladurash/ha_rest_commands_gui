@@ -1,0 +1,76 @@
+# REST commands are created via the config flow.
+# Each subentry registers a service rest_command.<name> dynamically.
+
+test_request:
+  description: >-
+    Send an arbitrary HTTP request for Postman-like testing and return the
+    response status, content, and headers. Useful from dashboard cards and
+    scripts to test any endpoint without pre-configuring a command.
+  fields:
+    url:
+      description: The URL to request. May contain Jinja2 templates.
+      example: "https://api.example.com/data?id={{ id }}"
+      required: true
+    method:
+      description: HTTP method to use.
+      example: POST
+      default: get
+      selector:
+        select:
+          options:
+            - get
+            - post
+            - put
+            - patch
+            - delete
+    headers:
+      description: Key/value headers to send with the request.
+      example:
+        Accept: application/json
+      selector:
+        object:
+    payload:
+      description: Body to send with the request. May contain Jinja2 templates.
+      example: '{"value": 42}'
+      selector:
+        text:
+          multiline: true
+    content_type:
+      description: Content-Type header to set.
+      example: application/json
+      selector:
+        text:
+    timeout:
+      description: Timeout in seconds.
+      example: 10
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 60
+          unit_of_measurement: seconds
+    verify_ssl:
+      description: Verify the SSL certificate of the endpoint.
+      default: true
+      selector:
+        boolean:
+
+get_history:
+  description: >-
+    Return the persisted request history (newest first). Every test_request
+    call, and every configured command call whose command has return_response
+    enabled, is recorded here. Returns {history: [...]}.
+  fields:
+    limit:
+      description: Maximum number of entries to return.
+      example: 20
+      default: 100
+      selector:
+        number:
+          min: 1
+          max: 100
+          unit_of_measurement: entries
+
+clear_history:
+  description: >-
+    Clear the persisted request history.
