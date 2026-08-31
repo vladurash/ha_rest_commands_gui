@@ -1,6 +1,6 @@
 # RESTful Command (GUI)
 
-A drop-in, GUI-enabled replacement for Home Assistant's built-in **RESTful Command** (`rest_command`) integration.
+A drop-in, GUI-enabled replacement for Home Assistant's built-in **RESTful Command** (`rest_command`) integration. 
 
 Configure REST API calls entirely from the **Settings → Devices & Services** UI instead of YAML. Each command becomes a `rest_command.<name>` service you can call from automations, scripts, or your dashboard.
 
